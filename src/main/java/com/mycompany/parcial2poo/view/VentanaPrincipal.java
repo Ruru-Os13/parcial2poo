@@ -43,7 +43,6 @@ public class VentanaPrincipal extends JFrame {
         scroll.setBounds(50, 130, 380, 200);
         add(scroll);
 
-        // 🔹 AGREGAR ESTUDIANTE
         btnEst.addActionListener(e -> {
             Estudiante est = new Estudiante(
                 JOptionPane.showInputDialog("Nombre"),
@@ -56,7 +55,6 @@ public class VentanaPrincipal extends JFrame {
             ctrl.agregarEstudiante(est);
         });
 
-        // 🔹 AGREGAR PROFESOR
         btnProf.addActionListener(e -> {
             Profesor p = new Profesor(
                 JOptionPane.showInputDialog("Nombre"),
@@ -71,7 +69,6 @@ public class VentanaPrincipal extends JFrame {
             ctrl.agregarProfesor(p);
         });
 
-        // 🔹 VER ESTUDIANTES (manual)
         btnVerEst.addActionListener(e -> {
             String texto = "";
             for (Estudiante est : ctrl.getEstudiantes()) {
@@ -83,7 +80,6 @@ public class VentanaPrincipal extends JFrame {
             area.setText(texto);
         });
 
-        // 🔹 VER PROFESORES (manual + ordenados)
         btnVerProf.addActionListener(e -> {
 
             ctrl.ordenarProfesoresPorSalario();

@@ -10,7 +10,6 @@ import java.util.Comparator;
 
 public class Reporte {
 
-    // 📊 Listar estudiantes
     public String listarEstudiantes(ArrayList<Estudiante> estudiantes) {
         StringBuilder sb = new StringBuilder();
 
@@ -21,10 +20,8 @@ public class Reporte {
         return sb.toString();
     }
 
-    // 📊 Listar profesores ordenados por salario (mayor a menor)
     public String listarProfesores(ArrayList<Profesor> profesores) {
 
-        // Ordenar
         Collections.sort(profesores, new Comparator<Profesor>() {
             @Override
             public int compare(Profesor p1, Profesor p2) {

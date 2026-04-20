@@ -24,7 +24,6 @@ public class ColegioControlador {
         return estudiantes;
     }
 
-    // PROFESORES
     public void agregarProfesor(Profesor p) {
         profesores.add(p);
     }

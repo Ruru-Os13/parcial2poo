@@ -11,7 +11,7 @@ public class Profesor extends Persona {
     private double salarioHora;
     private int horasTrabajadas;
 
-    // Constructor (IMPORTANTE: aquí sí debes tener uno)
+    // Constructor
     public Profesor(String nombre, String direccion, String telefono, String fechaNacimiento,
                     String cedula, String area, double salarioHora, int horasTrabajadas) {
         super(nombre, direccion, telefono, fechaNacimiento);
@@ -53,25 +53,21 @@ public class Profesor extends Persona {
     public void setHorasTrabajadas(int horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
     }
-
-    // 🔥 Cálculo del salario
+    
     public double calcularSalario() {
         double salarioBase = salarioHora * horasTrabajadas;
         return salarioBase + (salarioBase * 0.30);
     }
 
-    // 🔥 Cálculo de prestaciones
     public double calcularPrestaciones() {
         return calcularSalario() * 0.19;
     }
 
-    // 🔥 Sobrecarga (polimorfismo)
     public double calcularSalario(int horasExtra) {
         double salarioBase = salarioHora * (horasTrabajadas + horasExtra);
         return salarioBase + (salarioBase * 0.30);
     }
 
-    // 🔥 Sobrescritura
     @Override
     public String toString() {
         return nombre + " - Salario: " + calcularSalario() +
